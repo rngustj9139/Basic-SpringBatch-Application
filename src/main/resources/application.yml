@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: local
+  batch:
+    job:
+      names: ${job.name:NONE}
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: local
+      datasource:
+        url: jdbc:mysql://127.0.0.1:3360/house
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: admin
+        password: admin

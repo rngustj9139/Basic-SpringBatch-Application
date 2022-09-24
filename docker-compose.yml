@@ -6,11 +6,11 @@ services:
     image: mysql/mysql-server:5.7
     environment:
       MYSQL_ROOT_HOST: '%'
-      MYSQL_USER: "admin"
+      MYSQL_USER: "root"
       MYSQL_PASSWORD: "admin"
       MYSQL_DATABASE: "house"
     ports:
-      - "3360:3306"
+      - "3306:3306"
     command:
       - "mysqld"
       - "--character-set-server=utf8mb4"

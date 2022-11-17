@@ -1,5 +1,6 @@
 package koo.BasicSpringBatchApplication.job;
 
+import com.sun.org.apache.xerces.internal.impl.xpath.XPath;
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -44,5 +45,23 @@ public class HelloJobConfig { // 위의 망치 오른쪽 박스를 클릭한다�
             return RepeatStatus.FINISHED; // Tasklet은 반복상태를 정해주어야한다. => 헬로월드 출력하고 종료 할 것이라서 계속 반복하는 CONTINUABLE이 아닌 FINISHED 선택
         };
     }
+
+//    @Bean
+//    public Job sampleJob(JobRepository jobRepository, Step sampleStep) {
+//        return this.jobBuilderFactory.get("sampleJob")
+//                .repository(jobRepository)
+//                .start(sampleStep())
+//                .build();
+//    }
+//
+//    @Bean
+//    public Step sampleStep(PlatformTransactionManager transactionManager) {
+//        return this.stepBuilderFactory.get("sampleStep")
+//                .transactionManager(transactionManager)
+//                .<String, String>chunk(10)
+//                .reader(itemReader())
+//                .writer(itemWriter())
+//                .build();
+//    }
 
 }

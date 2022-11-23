@@ -19,7 +19,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @SpringBootTest
 @ExtendWith(SpringExtension.class) // 스프링 환경에서 테스트 할 수 있도록 설정
 @ActiveProfiles("test")
-@ContextConfiguration(classes = {HelloJobConfig.class, BatchTestConfig.class})
+@ContextConfiguration(classes = {HelloJobConfig.class, BatchTestConfig.class}) // 이 두개의 class만을 테스트 할 것임
 public class HelloJobConfigTest {
 
     @Autowired

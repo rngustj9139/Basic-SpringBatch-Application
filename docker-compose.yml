@@ -1,17 +1,16 @@
 version: '3'
-
 services:
   mysql:
     container_name: mysql_house
     image: mysql/mysql-server:5.7
     environment:
       MYSQL_ROOT_HOST: '%'
-      MYSQL_USER: "root"
-      MYSQL_PASSWORD: "admin"
+      MYSQL_USER: "house"
+      MYSQL_PASSWORD: "house"
       MYSQL_DATABASE: "house"
     ports:
-      - "3306:3306"
-    command:
+      - "3307:3306"
+    command: # mysql에 한글 데이터를 넣을때 깨지는 현상을 막는 설정
       - "mysqld"
       - "--character-set-server=utf8mb4"
       - "--collation-server=utf8mb4_unicode_ci"

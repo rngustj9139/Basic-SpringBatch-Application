@@ -25,3 +25,10 @@ spring:
     jdbc:
       initialize-schema: ALWAYS # 매번 스키마를 초기화 한다.
 
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+  jpa:
+    database: h2
